@@ -1,0 +1,38 @@
+﻿@model PhotoInformationApp.Controllers.HomeModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p>Please enter your desired query information below.</p>
+</div>
+<div class="text-center">
+    <form asp-action="RefreshResults" asp-controller="Home">
+        <p>
+            <label asp-for="AlbumId">Album Id</label>
+            <input asp-for="AlbumId"/>
+            <label asp-for="PhotoId">Photo Id</label>
+            <input asp-for="PhotoId"/>
+        </p>
+        <p>
+            <input type="submit" value="Refresh Results"/>
+        </p>
+    </form>
+</div>
+<div class="align-content-center">
+    <table style="border:1px solid black; margin-left:auto; margin-right:auto;" cellpadding="5">
+        <tr>
+            <th style="border:1px solid black">Album</th>
+            <th style="border:1px solid black">Id</th>
+            <th style="border:1px solid black">Title</th>
+        </tr>
+        @foreach(var photo in (ViewData["photos"] as List<PhotoModel>)!)
+        {
+            <tr>
+                <td style ="border:1px solid black">Photo Album: @photo.albumId</td>
+                <td style="border:1px solid black">[@photo.id]</td>
+                <td style="border:1px solid black">@photo.title</td>
+            </tr>
+        }  
+    <table/>
+</div>
