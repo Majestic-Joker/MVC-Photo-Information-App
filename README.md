@@ -2,7 +2,7 @@
 ### Joshua Beaty
 ### Description:
  This web app allows the user to browse json information found on: https://jsonplaceholder.typicode.com/photos
- This web app is hosted on AWS at: 
+ This web app is hosted on AWS at: [Photo Information App](http://photoinformationapp-dev.eba-kpjftmp7.us-east-2.elasticbeanstalk.com/)
 
 ### Instructions
 
